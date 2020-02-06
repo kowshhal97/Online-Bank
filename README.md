@@ -34,7 +34,23 @@ To handle large user traffic, we used Network load balancer. API-Gateway is used
 
 ![Architecture Diagram](https://github.com/kowshhal97/Online-Bank/blob/master/Architecture%20Diagram.jpg)
 
+## Why Kubernetes?
+
+We have 5 microservices to be deployed for our application. During the development phase, the application keeps changing frequently. We initially deployed every service with a combination of Docker host running a container. This docker host was part of an autoscaling group. All the instances were attached to a load balancer.
+
+Issues with this system were
+
+- The heavy overhead for deploying updates.
+- Underutilized resources in Docker host.
+- Application Rollouts.
+- Too many moving parts to manage.
+- Time expensive
+We later shifted to deploying these services on Kubernetes. It provided us a combination of Docker host, AutoScaling Groups and Loadbalancers. Along with many other features like easy rollouts, resource utilization, ease of use, etc.
+
+Therefore, we just have 1 Kubernetes cluster to manage each microservice.
+
 ## Kubernetes Architecture
+
 ![Kubernetes Architecture](https://github.com/kowshhal97/Online-Bank/blob/master/KubernetesArc.jpg)
 
 **API Reference doc** - https://documenter.getpostman.com/view/2631439/SWE3dfYt
