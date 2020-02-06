@@ -34,6 +34,9 @@ To handle large user traffic, we used Network load balancer. API-Gateway is used
 
 ![Architecture Diagram](https://github.com/kowshhal97/Online-Bank/blob/master/Architecture%20Diagram.jpg)
 
+## Kubernetes Architecture
+![Kubernetes Architecture](https://github.com/kowshhal97/Online-Bank/blob/master/KubernetesArc.jpg)
+
 **API Reference doc** - https://documenter.getpostman.com/view/2631439/SWE3dfYt
 
 **Sprint task sheet and burndown chart** - https://docs.google.com/spreadsheets/d/1wnaVrKHD61rhG7FJam9kuqD7ZZgLx6cDOj_zbCE6oBY/edit?usp=sharing
