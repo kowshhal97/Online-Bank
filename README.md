@@ -32,7 +32,7 @@ To handle large user traffic, we used Network load balancer. API-Gateway is used
 
 ## Architecture Diagram
 
-![Architecture Diagram](https://github.com/gopinathsjsu/team-project-cmpe202-team-project/blob/master/Architecture%20Diagram.jpg)
+![Architecture Diagram](https://github.com/kowshhal97/Online-Bank/blob/master/Architecture%20Diagram.jpg)
 
 **API Reference doc** - https://documenter.getpostman.com/view/2631439/SWE3dfYt
 
