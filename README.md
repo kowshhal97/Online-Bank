@@ -53,8 +53,52 @@ Therefore, we just have 1 Kubernetes cluster to manage each microservice.
 
 ![Kubernetes Architecture](https://github.com/kowshhal97/Online-Bank/blob/master/KubernetesArc.jpg)
 
-**API Reference doc** - https://documenter.getpostman.com/view/2631439/SWE3dfYt
 
-**Sprint task sheet and burndown chart** - https://docs.google.com/spreadsheets/d/1wnaVrKHD61rhG7FJam9kuqD7ZZgLx6cDOj_zbCE6oBY/edit?usp=sharing
+# CAP Theorem-
+
+- C : Consistency
+
+A guarantee that every node in a distributed cluster returns the same, most recent, successful write. Consistency refers to every client having the same view of the data. 
+
+- A : Availibility
+
+Every node that is up returns a response for all read and write requests in a reasonable amount of time. The key word here is every. To be available, every node on (either side of a network partition) must be able to respond in a reasonable amount of time
+
+- P : Partitioning
+
+Our system continues to function and upholds its consistency guarantees in spite of partitions. Network partitions are a fact of life. Distributed systems guaranteeing partition tolerance can gracefully recover from partitions once the partition heals
+
+## CAP theorem in our Architecture-
+
+Our choice of Database was MongoDB as it is a CP database, we needed consistency for our architecture that's the reason we opted for MongoDB, All the writes are strongly consistent, but reads are not always consistent. We wanted to make the system available for reads and consistent for writes, But we can guarentee an eventual consistency for reads.
+
+# AKF scale cube-
+
+**X-axis Scaling:**
+
+ - X-axis scaling or Horizontal duplication refers to running multiple identical copies of the application behind a load  
+ balancer. 
+ -  We have demonstrated this aspect by running each API on multiple pods scaled by a replica set in a Kubernetes instance. These kubernetes instances have been placed behind an AWS Network Load Balancers .<br/>
+     
+
+**Y-axis Scaling:**
+
+ - Y axis scaling refers to functional decomposition of a monolith service , that is breaking one huge service into multiple microservices. <br/>
+ - This aspect been implemented by separating all the services to function independently into the following APIs:
+  - Login API
+  - Transfer API
+  - Transaction API
+  - Accounts API
+  - Search API
+<br/>
+
+**Z-axis Scaling:**
+
+ - Z axis scaling refers to splitting similar data among different servers such thaat each server has 1/Nth of the data.<br/>
+ - This has been achieved in the case of this application by using MongoDB sharded cluster with 2 config servers, 2 sharded replica sets and 1 mongos query router server. MongoDb has been used to store login, item details, Account details, Transfer details and Searches <br/>
+
+## API Reference doc** - https://documenter.getpostman.com/view/2631439/SWE3dfYt
+
+## Sprint task sheet and burndown chart** - https://docs.google.com/spreadsheets/d/1wnaVrKHD61rhG7FJam9kuqD7ZZgLx6cDOj_zbCE6oBY/edit?usp=sharing
 
 ![](https://github.com/gopinathsjsu/team-project-cmpe202-team-project/blob/master/burndown_chart.png)
