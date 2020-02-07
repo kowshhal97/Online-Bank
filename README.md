@@ -14,8 +14,8 @@ Resource Components<br>
 6) MongoDB
 <br>
 
-1) API-Gateway is the entry point of the system for reach all services. It is responsible for path routing and securing REST.
-2) Network Load Balancer is responsible for handling traffic.
+1) API-Gateway is the entry point of the system for reach all services. It is responsible for path routing and securing REST. It Acts as a proxy for the loadbalancer which is in a private subnet and makes it available for public through a VPC link.
+2) Network Load Balancer is responsible for acting as proxy and linking up all the microservices which are registered as listeners on different ports.
 3) Kubernetes cluster contains 5 pods with 5 different microservices.<br>
    -Transactions service<br>
    -Transfer service<br>
