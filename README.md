@@ -110,6 +110,8 @@ https://docs.google.com/spreadsheets/d/1wnaVrKHD61rhG7FJam9kuqD7ZZgLx6cDOj_zbCE6
 
 In the case of traditional Read/Write to the database, the application does a lot of transformation in the case of both read and write operations. While in the case of Event-based CQRS application, the read happens in an extremely fast manner. The split architecture allows non-blocking read and write.
 
+Although we have implemented a CQRS architecture by saperating reads and writes, but they cannot be scaled independently based on the incoming traffic.
+
 The Idea is to separate reads and writes to the dataBase from each API so that reads or writes can be scaled individually based on the traffic at that point of time instead of scaling the entire application.
 
 **CI-CD**- Continuous Integration and Continuous Deployment
