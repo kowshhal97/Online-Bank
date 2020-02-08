@@ -125,7 +125,7 @@ Either cache the static content through a cloud front or have more servers in va
 
 **Server**
 - Pre Computing the expensive operations(DataBase requests by predicting what the client is going to request for).
-- Parallelism.
+- Parallelism and recurring feature.
 - Caching within the server.
 - VPC Peering.
 - If the above things are not possible at least display a progress bar on how long the server takes to process the request.
