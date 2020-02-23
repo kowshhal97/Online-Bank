@@ -99,7 +99,7 @@ Our choice of Database was MongoDB as it is a CP database, we needed consistency
 ## Availablity - 
 Availability can be ensured by deploying servers accross various regions and route based on latency by using AWS Route53, even databases need to be sharded wrt to data from a specific region.
 
-https://github.com/kowshhal97/Online-Bank/blob/master/AvailableArchitecture.jpg
+![](https://github.com/kowshhal97/Online-Bank/blob/master/AvailableArchitecture.jpg)
 
 ## API Reference doc -
 https://documenter.getpostman.com/view/2631439/SWE3dfYt
