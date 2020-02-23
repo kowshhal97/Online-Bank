@@ -96,6 +96,9 @@ Our choice of Database was MongoDB as it is a CP database, we needed consistency
  - Z-axis scaling refers to splitting similar data among different servers such that each server has 1/Nth of the data.<br/>
  - This has been achieved in the case of this application by using a MongoDB sharded cluster with 2 config servers, 2 sharded replica sets, and 1 mangos query router server. MongoDB has been used to store login, item details, Account details, Transfer details and Searches <br/>
 
+## Availablity - 
+Availability can be ensured by deploying servers accross various regions and route based on latency by using AWS Route53, even databases need to be sharded wrt to data from a specific region.
+
 ## API Reference doc -
 https://documenter.getpostman.com/view/2631439/SWE3dfYt
 
